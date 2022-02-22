@@ -8,7 +8,7 @@ WORKDIR /customer
 
 ENV PORT 8080
 
-COPY /kubernetes/services/customer /customer
+COPY kubernetes/services/customer /customer
 
 RUN mvn clean install
 
