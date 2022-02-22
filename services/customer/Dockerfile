@@ -6,7 +6,7 @@ LABEL 	org.opencontainers.image.title="Customer Service Container OCL-001" \
 
 ENV PORT 8080
 
-COPY kubernetes/services/customer/ /
+COPY /kubernetes/services/customer/ /
 
 RUN mvn clean install
 
