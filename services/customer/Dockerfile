@@ -9,3 +9,7 @@ ENV PORT 8080
 COPY kubernetes/services/customer/ /
 
 RUN mvn clean install
+
+COPY target/customer-0.0.1-SNAPSHOT.war customer-0.0.1-SNAPSHOT.war
+
+ENTRYPOINT ["java","-jar","/customer-0.0.1-SNAPSHOT.war"]
