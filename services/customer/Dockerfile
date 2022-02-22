@@ -1,8 +1,8 @@
 FROM maven:3.8.4-jdk-8-slim
 
-LABEL 	org.opencontainers.image.title="Customer Service Container OCL-001"
-		org.opencontainers.image.description="Customer micro service with basic infomation"
-		org.opencontainers.image.author="@Sakeb"
+LABEL 	org.opencontainers.image.title="Customer Service Container OCL-001" \
+	org.opencontainers.image.description="Customer micro service with basic infomation" \
+	org.opencontainers.image.author="@Sakeb"
 
 RUN mvn clean install
 ARG WAR_FILE=target/*.war
